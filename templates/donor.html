@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Donate Blood</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background-color: #ffe6e6;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 50px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: white;
+            width: 400px;
+            margin: 40px auto;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        button {
+            background: #e60000;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: darkred;
+        }
+
+        a { text-decoration: none; }
+    </style>
+</head>
+<body>
+
+<div class="logo">❤️ Donate Blood</div>
+
+<div class="card">
+    <h2>Become a Hero Today</h2>
+    <form action="/add_donor" method="post">
+        
+        <!-- Name -->
+        <input type="text" 
+               name="name" 
+               placeholder="Full Name" 
+               required>
+
+        <!-- Age -->
+        <input type="number" 
+               name="age" 
+               placeholder="Age" 
+               min="18" 
+               max="65"
+               required>
+
+        <!-- Blood Group (Validated) -->
+        <input type="text" 
+               name="blood" 
+               placeholder="Blood Group (A+, B-, AB+, O+)" 
+               pattern="^(A|B|AB|O)[+-]$"
+               title="Enter valid blood group: A+, A-, B+, B-, AB+, AB-, O+, O-"
+               oninput="this.value = this.value.toUpperCase()"
+               required>
+
+        <button type="submit">Donate Now</button>
+    </form>
+    <br>
+    <a href="/">⬅ Back Home</a>
+</div>
+
+</body>
+</html>
+

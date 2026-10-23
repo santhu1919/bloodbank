@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Request Blood</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background-color: #e6f2ff;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 50px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: white;
+            width: 400px;
+            margin: 40px auto;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        button {
+            background: #0073e6;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #004080;
+        }
+
+        a { text-decoration: none; }
+    </style>
+</head>
+<body>
+
+<div class="logo">🏥 Blood Request</div>
+
+<div class="card">
+    <h2>Request Blood Units</h2>
+    <form action="/add_request" method="post">
+        <input type="text" name="patient" placeholder="Patient Name" required>
+        <input type="text" name="blood" placeholder="Blood Group" required>
+        <input type="number" name="units" placeholder="Units Required" required>
+        <button type="submit">Submit Request</button>
+    </form>
+    <br>
+    <a href="/">⬅ Back Home</a>
+</div>
+
+</body>
+</html>
+

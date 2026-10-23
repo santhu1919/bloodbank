@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blood Bank Login</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #0f9b0f, #b30000);
+            overflow: hidden;
+        }
+
+        /* Floating Bubbles */
+        .bubble {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.08);
+            animation: float 10s infinite ease-in-out;
+        }
+
+        .bubble:nth-child(1) {
+            width: 120px;
+            height: 120px;
+            left: 10%;
+            top: 20%;
+        }
+
+        .bubble:nth-child(2) {
+            width: 80px;
+            height: 80px;
+            right: 15%;
+            top: 30%;
+            animation-duration: 8s;
+        }
+
+        .bubble:nth-child(3) {
+            width: 150px;
+            height: 150px;
+            left: 20%;
+            bottom: 15%;
+            animation-duration: 12s;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-30px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* Login Box */
+        .login-box {
+            position: relative;
+            width: 320px;
+            padding: 35px;
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(18px);
+            border-radius: 18px;
+            box-shadow: 0 10px 35px rgba(0,0,0,0.4);
+            text-align: center;
+            color: white;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .logo {
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-bottom: 25px;
+            letter-spacing: 1px;
+        }
+
+        .input-box {
+            position: relative;
+            margin-bottom: 25px;
+        }
+
+        .input-box input {
+            width: 100%;
+            padding: 10px;
+            background: transparent;
+            border: none;
+            border-bottom: 1.5px solid rgba(255,255,255,0.7);
+            outline: none;
+            color: white;
+            font-size: 14px;
+        }
+
+        .input-box label {
+            position: absolute;
+            left: 0;
+            top: 10px;
+            font-size: 14px;
+            color: rgba(255,255,255,0.8);
+            pointer-events: none;
+            transition: 0.3s;
+        }
+
+        .input-box input:focus ~ label,
+        .input-box input:valid ~ label {
+            top: -12px;
+            font-size: 11px;
+            color: #00ffcc;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 25px;
+            background: linear-gradient(45deg, #00c853, #ff1744);
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 12px #00ffcc;
+        }
+
+        .footer {
+            margin-top: 15px;
+            font-size: 11px;
+            opacity: 0.8;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- Bubbles -->
+<div class="bubble"></div>
+<div class="bubble"></div>
+<div class="bubble"></div>
+
+<div class="login-box">
+    <div class="logo">🩸</div>
+    <h2>Blood Bank Login</h2>
+
+    <form action="/login" method="POST">
+        <div class="input-box">
+            <input type="text" name="username" required>
+            <label>Username</label>
+        </div>
+
+        <div class="input-box">
+            <input type="password" name="password" required>
+            <label>Password</label>
+        </div>
+
+        <button type="submit">Login</button>
+    </form>
+
+    <div class="footer">
+        Saving Lives One Drop at a Time
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blood Bank - Dashboard</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: linear-gradient(to right, #ff4e50, #b30000);
+            color: white;
+            text-align: center;
+        }
+
+        .navbar {
+            width: 100%;
+            padding: 15px;
+            background: rgba(0,0,0,0.3);
+            text-align: right;
+        }
+
+        .logout-btn {
+            background: white;
+            color: #b30000;
+            padding: 8px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .logout-btn:hover {
+            background: black;
+            color: white;
+        }
+
+        .logo {
+            font-size: 70px;
+            margin-top: 60px;
+        }
+
+        h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 20px;
+            background: white;
+            color: #b30000;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: black;
+            color: white;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="/logout" class="logout-btn">Logout</a>
+</div>
+
+<div class="logo">🩸</div>
+<h1>Blood Bank Management System</h1>
+<p>Saving Lives One Drop at a Time</p>
+
+<a href="/donor" class="btn">Donate Blood</a>
+<a href="/request" class="btn">Request Blood</a>
+<a href="/stock" class="btn">View Stock</a>
+
+</body>
+</html>
